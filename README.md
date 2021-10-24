@@ -1,5 +1,6 @@
 ## Backend Developer Assessment
 
+**Framework**: Laravel
 ### Requirements
 - PHP 7.4^
 - MySQL
@@ -18,10 +19,12 @@
 	- **database default name:** laravel
 	- Configure mysql credential in `.env` file if you have your own mysql
 4. open cmd and change directory to the repository path, run the command below:
-     ```
-composer install
-php artisan migrate:fresh --seed
-php artisan serve```
+
+       composer install
+       
+       php artisan migrate:fresh --seed
+       
+       php artisan serve
 
 ## API
 ### **Resources**
