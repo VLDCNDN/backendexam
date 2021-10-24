@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', ['as' => 'login', AuthController::class, 'login']);
 
-Route::post('/hummingdistance', function (Request $req) {
+Route::post('/hammingdistance', function (Request $req) {
     $req->validate(['x' => 'integer|gte:0|lt:' . pow(2, 31), 'y' => 'integer|gte:0|lt:' . pow(2, 31)]);    
     return response(substr_count(decbin($req->x ^ $req->y), "1"), 200);
 });

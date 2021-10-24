@@ -29,12 +29,13 @@ php artisan serve```
 - [POST /api/login](#post-apilogin)
 - [GET /users](#get-users)
 - [GET /users/{username}](#get-usersusername)
+- [POST /api/hammingdistance](#post-apihammingdistance)
 
 ### POST /api/register
 **Header**: Accept: application/json
 
 **Example** : http://localhost:8080/api/register
-##### Fields
+##### Body
 | Name  | Type   |   |
 | ------------ | ------------ | ------------ |
 | name  | string  | required  |
@@ -49,7 +50,7 @@ php artisan serve```
 
 **Example** : http://localhost:8080/api/login
 
-##### Fields
+##### Body
 | Name  | Type   |   |
 | ------------ | ------------ | ------------ |
 |  username | string  | required  |
@@ -82,3 +83,13 @@ php artisan serve```
 | Name  | Type   |   |
 | ------------ | ------------ | ------------ |
 |  username | string  | for multiple username filter, separate using comma ( , )  |
+
+### POST /api/hammingdistance
+
+##### Body
+*Prefer to use raw-json*
+
+| Name  | Type   |   |
+| ------------ | ------------ | ------------ |
+| x | integer:gte=0:lt=2^31  | required  |
+| y | integer:gte=0:lt=2^31  | required  |
