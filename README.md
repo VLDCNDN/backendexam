@@ -11,7 +11,7 @@
 ------------
 
 
-1. Clone this repository 
+1. Clone this repository `https://github.com/VLDCNDN/backendexam`
 2. add php-redis in php extension
 	- Instruction to install in windows [here](https://ourcodeworld.com/articles/read/1502/how-to-install-and-use-the-redis-extension-in-xampp-locally-in-windows-10 "here")
 3. make sure to install `mysql` and add database depends on the name in `.env` file
@@ -24,13 +24,13 @@ php artisan migrate:fresh --seed
 php artisan serve```
 
 ## API
-#### **Resources**
-- [POST /api/register](#post-api-register)
-- POST /api/login
-- GET /users
-- GET /users/{username}
+### **Resources**
+- [POST /api/register](#post-apiregister)
+- [POST /api/login](#post-apilogin)
+- [GET /users](#get-users)
+- [GET /users/{username}](#get-usersusername)
 
-#### POST /api/register
+### POST /api/register
 **Header**: Accept: application/json
 
 **Example** : http://localhost:8080/api/register
@@ -44,7 +44,7 @@ php artisan serve```
 | follower_count  |  integer | optional  |
 | public_repository_count  | integer  | optional  |
 
-#### POST /api/login
+### POST /api/login
 **Header**: Accept: application/json
 
 **Example** : http://localhost:8080/api/login
@@ -55,8 +55,9 @@ php artisan serve```
 |  username | string  | required  |
 |  password |  string | required  |
 
-#### GET /users
+### GET /users
 **Authentication** : Bearer Token
+
 **Header**: Accept: application/json
 
 **Example** : 
@@ -68,8 +69,9 @@ php artisan serve```
 | ------------ | ------------ | ------------ |
 |  page | integer  | optional  |
 
-#### GET /users/{username}
+### GET /users/{username}
 **Authentication** : Bearer Token
+
 **Header**: Accept: application/json
 
 **Example** : 
